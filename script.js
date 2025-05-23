@@ -9,7 +9,7 @@ function updateClock() {
   const minutes = padZero(now.getMinutes());
   const seconds = padZero(now.getSeconds());
 
-  let timeString = now.toLocaleTimeString('en-US', { hour12: true });
+  const timeString = `${hours}:${minutes}:${seconds}`;
   document.getElementById('time').textContent = timeString;
 
   const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
